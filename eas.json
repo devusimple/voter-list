@@ -1,6 +1,7 @@
 {
   "cli": {
-    "version": ">= 3.0.0"
+    "version": ">= 16.28.0",
+    "appVersionSource": "remote"
   },
   "build": {
     "development": {
@@ -8,14 +9,19 @@
       "distribution": "internal"
     },
     "preview": {
+      "distribution": "internal",
       "android": {
-        "buildType": "apk"
-      },
-      "env": {
-        "EXPO_PUBLIC_INSTANT_APP_ID": "dea00258-c476-40fa-b05d-3ba4f7c25814"
+        "buildType": "apk",
+        "autoIncrement": "version"
       }
     },
-    "production": {}
+    "production": {
+      "autoIncrement": true,
+      "android": {
+        "buildType": "app-bundle",
+        "autoIncrement": "version"
+      }
+    }
   },
   "submit": {
     "production": {}

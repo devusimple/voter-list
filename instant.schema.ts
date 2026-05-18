@@ -22,7 +22,7 @@ const _schema = i.schema({
     voterLists: i.entity({
       serial: i.string().unique().indexed(),
       name: i.string().indexed(),
-      voterIdNumber: i.number(),
+      voterIdNumber: i.string().indexed(),
       fatherName: i.string(),
       motherName: i.string(),
       profession: i.string(),
